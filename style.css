@@ -19,38 +19,132 @@ html, body {
 }
 .container {
   display: flex;
-  justify-content:flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items:flex-start;
   height: 100%;
   width: 100%;
   background-image: url(images/playclay3.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   margin: 0px;
   padding: 0;
   background-color: #f7eccb;
   overflow: hidden;
 }
-.toggler, .toggler3, .menu__checkbox{
-    display: none;
-}
+
 .menu__list{
-    margin-left: 100px;
+    
     padding: 0;
     list-style: none;
-    
+    display: none;
+    position: absolute;
+    left: 0;
+   background-color:#f7eccb;
+   border-radius: 20px;
+   text-align: center;
+width: 100%;
+  height: 100vh; 
+  margin-top: 140px;
 }
 .menu__item {
     border: 2px solid #eab36e;
     border-radius: 20px;
     margin-top: 20px;
-    width: 200px;
+    height: 50px;
     text-align: center;
+    display: block;
+    align-self: center;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 .menu__link{
     text-decoration: none;
-    color: black;
+    color: #5f462f;
     display: block;
+   text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+}
+.menu__checkbox{
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.toggler3{
+    display: none;
+    max-width: 20px;
+    height: auto;
+   
+}
+.toggler{
+    max-width: 30px;
+   
+}
+.toggler, .toggler3{
+    margin-top: 100px;
+}
+.menu__checkbox:checked ~.menu__list{
+    display: inline-block;
+    
+}
+.menu__checkbox:checked ~.menu__toggler .toggler{
+    display: none;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler3{
+    display: inline-block;
+}
+.menu__toggler, .menu2__toggler2{
+    cursor: pointer;
+}
+@media (min-width: 768px){
+.container{
+    background-size: contain;
+}
+.toggler, .toggler2, .toggler3, .menu__checkbox{
+    display: none;
+}
+.menu__item:hover{
+    color: #f7eccb;
+    cursor: pointer;
+    
+    padding: 0px;
+}
+.menu__checkbox:checked ~.menu__list{
+    display: block;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler{
+    display: none;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler3{
+    display: inline-block;
+}
+.menu__toggler, .menu2__toggler2{
+    cursor: pointer;
+}
+.menu__link{
+    text-decoration: none;
+    color: #5f462f;
+    display: inline-block;   
+}
+.menu__list{
+    display: inline-block;
+    width: 200px;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 100px;
+  
+}
+.menu__item{
     margin: 20px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    
+}
+
 }
