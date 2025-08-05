@@ -23,7 +23,7 @@ html, body {
   align-items:flex-start;
   height: 100%;
   width: 100%;
-  background-image: url(images/playclay3.svg);
+  background-image: url(/images/playclay3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,12 +43,25 @@ html, body {
    background-color:#f7eccb;
    border-radius: 20px;
    text-align: center;
-width: 100%;
+    width: 100%;
   height: 100vh;
   margin: 0;
-  
 }
-.menu__item {
+.menu__list_sablona{
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    left: 0;
+   background-color:#f7eccb;
+   border-radius: 20px;
+   text-align: center;
+    width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.menu__item, .menu__item_sablona {
     border: 2px solid #eab36e;
     border-radius: 20px;
     margin-top: 20px;
@@ -62,6 +75,9 @@ width: 100%;
 .menu__item:first-child{
     margin-top: 100px;
 }
+.menu__item_sablona:first-child{
+    margin-top: 50px;
+}
 .menu__link{
     text-decoration: none;
     color: #5f462f;
@@ -69,9 +85,9 @@ width: 100%;
    text-align: center;
     width: 100%;
     height: 50px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
-.menu__checkbox{
+.menu__checkbox, .menu_sablona__checkbox{
     position: absolute;
     left: -9999px;
     width: 0;
@@ -85,14 +101,28 @@ width: 100%;
    margin-top: 50px;
    z-index: 1;
    position: absolute;
-   
+}
+.toggler3_sablona{
+    display: none;
+    max-width: 20px;
+    height: auto;
+   margin-top: 0px;
+   z-index: 1;
+   position: absolute;
+
 }
 .toggler{
     max-width: 30px;
    margin-top: 50px;
+   
 }
-header{
+.toggler_sablona{
+    margin-top: 30px;
+    max-width: 30px;
+}
+header, .header_sablona{
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #f7eccb;
     height: 150px;
@@ -101,24 +131,32 @@ header{
     text-align: center;
 }
 
-.menu__checkbox:checked ~.menu__list{
+.menu__checkbox:checked ~.menu__list, .menu_sablona__checkbox:checked ~.menu__list_sablona{
     display: inline-block;
     
 }
-.menu__checkbox:checked ~.menu__toggler .toggler{
+.menu__checkbox:checked ~.menu__toggler .toggler, .menu_sablona__checkbox:checked ~.menu_sablona__toggler .toggler_sablona{
     display: none;
 }
-.menu__checkbox:checked ~.menu__toggler .toggler3{
+.menu__checkbox:checked ~.menu__toggler .toggler3, .menu_sablona__checkbox:checked ~.menu_sablona__toggler .toggler3_sablona{
     display: inline-block;
 }
-.menu__toggler, .menu2__toggler2{
+.menu__toggler, .menu2__toggler2, .menu_sablona__toggler, .menu2__toggler2{
     cursor: pointer;
 }
+h1{
+    font-family: "Gloock";
+    color: #5f462f;
+    font-size: 40px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
 @media (min-width: 768px){
 .container{
     background-size: contain;
 }
-.toggler, .toggler2, .toggler3, .menu__checkbox{
+.toggler, .toggler2, .toggler3, .menu__checkbox, .toggler3_sablona, .toggler_sablona{
     display: none;
 }
 .menu__item:hover{
@@ -143,6 +181,7 @@ header{
     text-decoration: none;
     color: #5f462f;
     display: inline-block;   
+    
 }
 .menu__list{
     display: inline-block;
@@ -160,5 +199,35 @@ header{
     text-align: center;
     
 }
+.menu__list_sablona{
+    display: flex;
+   margin: 0;
+  position: relative;
+  margin-right: 80px;
+  margin-top: 20px;
+}
 
+.menu__item_sablona{
+     margin: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 160px;
+    padding: 0;
+   
+    
+}
+
+.menu__item_sablona:first-child{
+    margin-top: 10px;
+}
+.header_sablona{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: row;
+}
+h1{
+    margin-left: 80px;
+    margin-top: 30px;
+}
 }

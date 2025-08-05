@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{title}} </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="cont">
+       <div class="header_sablona">
+        <h1>play clay</h1>
+        <nav class="menu_sablona">
+        <input type="checkbox" class="menu_sablona__checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="menu_sablona__toggler"><img class="toggler_sablona" src="/images/menu(1).png" alt="menu">
+            <img class="toggler3_sablona" src="/images/krizek.png" alt="menu"></label>
+        
+        <ul class="menu__list_sablona">
+                <li class="menu__item_sablona"><a href="/onas/" class="menu__link">o nás</a></li>
+                <li class="menu__item_sablona"><a href="https://playclayatelier.notado.cz/form-service" class="menu__link">kurzy a akce</a></li>
+                <li class="menu__item_sablona"><a href="/shop/" class="menu__link">shop</a></li>
+                <li class="menu__item_sablona"><a href="/kontakt/" class="menu__link">kontakt</a></li>
+            </ul>
+        </nav></div>
+        {{content | safe}}
+    </div>
+</body>
+</html>
