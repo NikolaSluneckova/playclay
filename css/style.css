@@ -146,7 +146,6 @@ header, .header_sablona{
 }
 h1{
     font-family: "Gloock";
-    color: #5f462f;
     font-size: 40px;
     z-index: 1;
     margin-top: 50px;
@@ -197,7 +196,7 @@ h1{
     height: 50px;
     width: 200px;
     text-align: center;
-    
+    font-size: 18px;
 }
 .menu__list_sablona{
     display: flex;
@@ -229,5 +228,9 @@ h1{
 h1{
     margin-left: 80px;
     margin-top: 30px;
+}
+.h1__link{
+    text-decoration: none;
+    color: #5f462f;
 }
 }
