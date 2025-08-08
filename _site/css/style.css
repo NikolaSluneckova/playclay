@@ -1,0 +1,236 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+html, body, .container {
+  border: 1px solid #f7eccb;
+  background-color: #f7eccb;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  background-color: #f7eccb;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  height: 100%;
+  width: 100%;
+  background-image: url(/images/playclay3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0px;
+  padding: 0;
+  background-color: #f7eccb;
+  overflow: hidden;
+}
+
+.menu__list{
+    
+    padding: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    left: 0;
+   background-color:#f7eccb;
+   border-radius: 20px;
+   text-align: center;
+    width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.menu__list_sablona{
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    left: 0;
+   background-color:#f7eccb;
+   border-radius: 20px;
+   text-align: center;
+    width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.menu__item, .menu__item_sablona {
+    border: 2px solid #eab36e;
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 50px;
+    text-align: center;
+    display: block;
+    align-self: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.menu__item:first-child{
+    margin-top: 100px;
+}
+.menu__item_sablona:first-child{
+    margin-top: 50px;
+}
+.menu__link{
+    text-decoration: none;
+    color: #5f462f;
+    display: block;
+   text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+}
+.menu__checkbox, .menu_sablona__checkbox{
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.toggler3{
+    display: none;
+    max-width: 20px;
+    height: auto;
+   margin-top: 50px;
+   z-index: 1;
+   position: absolute;
+}
+.toggler3_sablona{
+    display: none;
+    max-width: 20px;
+    height: auto;
+   margin-top: 0px;
+   z-index: 1;
+   position: absolute;
+
+}
+.toggler{
+    max-width: 30px;
+   margin-top: 50px;
+   
+}
+.toggler_sablona{
+    margin-top: 30px;
+    max-width: 30px;
+}
+header, .header_sablona{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7eccb;
+    height: 150px;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu__checkbox:checked ~.menu__list, .menu_sablona__checkbox:checked ~.menu__list_sablona{
+    display: inline-block;
+    
+}
+.menu__checkbox:checked ~.menu__toggler .toggler, .menu_sablona__checkbox:checked ~.menu_sablona__toggler .toggler_sablona{
+    display: none;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler3, .menu_sablona__checkbox:checked ~.menu_sablona__toggler .toggler3_sablona{
+    display: inline-block;
+}
+.menu__toggler, .menu2__toggler2, .menu_sablona__toggler, .menu2__toggler2{
+    cursor: pointer;
+}
+h1{
+    font-family: "Gloock";
+    font-size: 40px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+@media (min-width: 768px){
+.container{
+    background-size: contain;
+}
+.toggler, .toggler2, .toggler3, .menu__checkbox, .toggler3_sablona, .toggler_sablona{
+    display: none;
+}
+.menu__item:hover{
+    color: #f7eccb;
+    cursor: pointer;
+    
+    padding: 0px;
+}
+.menu__checkbox:checked ~.menu__list{
+    display: block;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler{
+    display: none;
+}
+.menu__checkbox:checked ~.menu__toggler .toggler3{
+    display: inline-block;
+}
+.menu__toggler, .menu2__toggler2{
+    cursor: pointer;
+}
+.menu__link{
+    text-decoration: none;
+    color: #5f462f;
+    display: inline-block;   
+    
+}
+.menu__list{
+    display: inline-block;
+    width: 200px;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 100px;
+  
+}
+.menu__item{
+    margin: 20px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+.menu__list_sablona{
+    display: flex;
+   margin: 0;
+  position: relative;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+.menu__item_sablona{
+     margin: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 160px;
+    padding: 0;
+   
+    
+}
+
+.menu__item_sablona:first-child{
+    margin-top: 10px;
+}
+.header_sablona{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: row;
+}
+h1{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.h1__link{
+    text-decoration: none;
+    color: #5f462f;
+}
+}
