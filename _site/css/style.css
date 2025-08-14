@@ -150,6 +150,10 @@ h1{
     z-index: 1;
     margin-top: 50px;
 }
+.h1__link{
+    text-decoration: none;
+    color: #5f462f;
+}
 
 @media (min-width: 768px){
 .container{
@@ -228,9 +232,5 @@ h1{
 h1{
     margin-left: 80px;
     margin-top: 30px;
-}
-.h1__link{
-    text-decoration: none;
-    color: #5f462f;
 }
 }
